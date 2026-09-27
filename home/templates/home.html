@@ -1,25 +1,30 @@
-<html>
-    <head>
-        <title>home</title>
-        <style>
-            body {
-                background-color: lightblue;
-            }
-            .div {
-                text-align: center;
-                padding: 20px;
-                border: 5px solid black;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="div">
-            <div>
-                <a href="/contact/">Contact</a> |
-                <a href="/gallery/">Gallery</a>
-            </div>
+{% extends 'base.html' %}
+
+{% block title %}Home | MatrixMind{% endblock %}
+
+{% block content %}
+<section class="card hero">
+    <div class="eyebrow">Welcome</div>
+    <h1>Build a modern digital experience.</h1>
+    <p>Explore our interactive home page with a clean layout, strong typography, and a polished design language that works across all sections.</p>
+    <div class="button-row">
+        <a href="{% url 'contact' %}" class="btn primary">Contact Us</a>
+        <a href="{% url 'gallery' %}" class="btn secondary">View Gallery</a>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-box">
+            <h3>Fast</h3>
+            <p>Optimized for a clear and responsive browsing experience.</p>
         </div>
-        <h1>Welcome to Home Page</h1>
-        <p>This is the home page.</p>
-    </body>
-</html>
+        <div class="info-box">
+            <h3>Modern</h3>
+            <p>Built with clean design patterns and consistent styling.</p>
+        </div>
+        <div class="info-box">
+            <h3>Flexible</h3>
+            <p>Same visual system used across every page for a cohesive brand.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

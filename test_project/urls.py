@@ -21,7 +21,7 @@ from contact.views import contact
 from gallery.views import gallery
 
 urlpatterns = [
-    path('', index),
-    path('contact/', contact),
-    path('gallery/', gallery),
+    path('', index, name='home'),
+    path('contact/', contact, name='contact'),
+    path('gallery/', gallery, name='gallery'),
 ]
